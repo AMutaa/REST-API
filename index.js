@@ -4,13 +4,8 @@ const express = require('express');
 
 const app = express();
 
-//GET request
-
-app.get('/api', function (req, res) {
-  console.log('GET request');
-  res.send({ name: 'Adam' });
-})
-
+//initiliaze routes
+app.use('/api', require('./routes/api.js'));
 
 //listen for requests
 
