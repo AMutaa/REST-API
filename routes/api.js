@@ -8,10 +8,10 @@ router.get('/ninjas', function (req, res) {
 })
 
 //add a new ninja to the database
-router.post('/ninjas', function (req, res) {
+router.post('/ninjas', function (req, res, next) {
   Ninja.create(req.body).then(function (ninja) {
     res.send(ninja)
-  });
+  }).catch(next);
 })
 
 //update a ninja in the database
