@@ -20,7 +20,10 @@ router.put('/ninjas/:id', function (req, res) {
 })
 
 //delete a ninja from the database
-router.delete('/ninjas/:id', function (req, res) {
+router.delete('/ninjas/:id', function (req, res, next) {
+  Ninja.findByIdAndRemove({ _id: req.params.id }).then(function (ninja) {
+    res.send(ninja)
+  });
   res.send({ type: 'DELETE' })
 })
 
