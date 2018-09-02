@@ -1,0 +1,21 @@
+body{
+  background: orangered;
+  text-align: center;
+  color:white;
+  font-family: Raleway;
+}
+
+
+.title{
+  font-size:30px;
+}
+
+h3{
+  padding: 10px;
+  background: white;
+  color: black;
+  width: 30%;
+  margin: 0 auto;
+}
+
+
